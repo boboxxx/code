@@ -1,0 +1,96 @@
+def sw1(s):
+    if  s == '零':
+        return 0
+    elif s == '一':
+        return 1
+    elif s == '二':
+        return 2
+    elif s == '三':
+        return 3
+    elif s == '四':
+        return 4
+    elif s == '五':
+        return 5
+    elif s == '六':
+        return 6
+    elif s == '七':
+        return 7
+    elif s == '八':
+        return 8
+    elif s == '九':
+        return 9
+    elif s == '十':
+        return 10
+    elif s == 0:
+        return '零'
+    elif s == 1:
+        return '一'
+    elif s == 2:
+        return '二'
+    elif s == 3:
+        return'三'
+    elif s == 4:
+        return '四'
+    elif s == 5:
+        return '五'
+    elif s == 6:
+        return'六'
+    elif s == 7:
+        return '七'
+    elif s == 8:
+        return '八'
+    elif s == 9:
+        return '九'
+    elif s == 10:
+        return '十'
+
+
+def sw2(s):
+    if s == '零':
+        return 0
+    elif s == '一':
+        return 1
+    elif s == '二':
+        return 2
+    elif s== '三':
+        return 3
+    elif s == '四':
+        return 4
+    elif s == '五':
+        return 5
+    elif s == '六':
+        return 6
+    elif s == '七':
+        return 7
+    elif s == '八':
+        return 8
+    elif s == '九':
+        return 9
+
+def shuru():
+    while 1:
+        s=input("")
+        if s=="结束":
+            break
+        else:
+            s=s.split()
+            panduan(s)
+
+def panduan(s):
+    global a
+    if s[0]=="整数":
+        a=sw1(s[3])
+    if s[1] == "增加":
+        a = a + sw1(s[2])
+    if s[1] == "减少":
+        a = a - sw1(s[2])
+    if s[0]=="如果":
+        if s[2] == "大于":
+            if a>sw2(s[3]):
+                print("你好，世界")
+            else:
+                print("冻死我了")
+    if s[0]=="看看":
+        print(sw1(a))
+
+shuru()
